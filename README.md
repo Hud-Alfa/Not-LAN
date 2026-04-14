@@ -53,7 +53,7 @@ Uygulamayı yalnızca **web** olarak çalıştıracaksanız Node.js + tarayıcı
 ## Kurulum
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Hud-Alfa/Not-LAN.git
 cd Not-LAN
 npm install
 ```
