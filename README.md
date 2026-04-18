@@ -1,49 +1,44 @@
-# Not-Lan
+# Not-Lan (Eğitim ve Materyal Paylaşım Platformu)
 
-**Not-Lan**, **mobil** (Android ve iOS, [Expo](https://expo.dev/) ile) ve **web** tarayıcı üzerinden çalışacak şekilde tasarlanmış bir not paylaşım ve sohbet uygulamasıdır. Tek kod tabanı; responsive arayüz ile masaüstü web ve telefon deneyimini destekler.
+**Not-Lan**, öğrenciler ve geliştiriciler için tasarlanmış açık kaynaklı bir eğitim, not paylaşım ve iletişim platformudur. [Expo](https://expo.dev/) altyapısı kullanılarak tek bir kod tabanıyla geliştirilmiş olup; responsive tasarımı sayesinde Android, iOS ve masaüstü web tarayıcılarında kesintisiz bir deneyim sunar. 
 
-## Ekran görüntüleri (mobil)
+*Not: Bu proje tamamen eğitim ve yardımlaşma amaçlı geliştirilmiş bir araçtır.*
 
-Aşağıda uygulamanın mobil arayüzünden örnekler ve her birinin neyi gösterdiği kısaca açıklanmıştır.
+## Arayüz İncelemesi (Mobil Geliştirme Ortamı)
 
-| | | |
-|:--:|:--:|:--:|
-| ![Ana sayfa – notlar](./screenshots/Anasayfa-Notlar.jpg) | ![Not detay](./screenshots/notdetay.jpg) | ![Not paylaşma](./screenshots/Notpaylasma.jpg) |
-| **Ana sayfa** — Paylaşılan notların listelendiği ekran; arama, sıralama ve kategori filtreleri ile notlara hızlı erişim. | **Not detayı** — Seçilen notun tam içeriği, dosya önizlemesi ve etkileşimler (ör. yorum / beğeni) için detay görünümü. | **Not paylaşma** — Yeni not ekleme; başlık, açıklama, ders/kategori ve dosya veya görsel yükleme alanları. |
-| ![Sohbetler](./screenshots/sohbetler.jpg) | ![Sohbet arama](./screenshots/sohbet-arama.jpg) | ![Profil](./screenshots/profilim.jpg) |
-| **Sohbetler** — Mevcut konuşmaların listesi; yeni mesaj veya sohbet başlatmaya giriş noktası. | **Sohbet** — Bir sohbet içinde mesajlaşma veya sohbet başlatma / kullanıcı arama ile ilgili ekran. | **Profil** — Kullanıcı bilgileri, güven skoru, paylaşılan notlar ve profil düzenlemeye yönlendirme. |
+Aşağıda uygulamanın temel işlevlerinden birkaçını gösteren geliştirici ekran görüntüleri yer almaktadır.
 
-<p align="center">
-  <img src="./screenshots/ayarlar.jpg" width="280" alt="Ayarlar ekranı" />
-</p>
+| | |
+|:--:|:--:|
+| <img src="./screenshots/Anasayfa-Notlar.jpg" width="250" alt="Ana sayfa"> | <img src="./screenshots/Notpaylasma.jpg" width="250" alt="Not paylaşma"> |
+| **Ana Akış** — Sisteme yüklenen ders notlarının listelendiği ana modül. Arama, kategorizasyon ve sıralama algoritmaları içerir. | **İçerik Yükleme** — Sisteme yeni materyal ekleme formu. Başlık, açıklama, ders kategorisi ve medya yükleme bileşenlerini barındırır. |
+| <img src="./screenshots/sohbetler.jpg" width="250" alt="Sohbetler"> | <img src="./screenshots/ayarlar.jpg" width="250" alt="Ayarlar"> |
+| **Mesajlaşma Paneli** — Kullanıcılar arası aktif iletişim oturumlarının ve geçmiş konuşmaların listelendiği ekran. | **Sistem Ayarları** — Hesap tercihleri, oturum yönetimi ve güvenlik parametreleri. |
 
-<p align="center"><strong>Ayarlar</strong> — Hesap, bildirimler ve uygulama tercihleri; çıkış ve güvenlikle ilgili seçenekler.</p>
+## Teknik Altyapı ve Bağımlılıklar
 
-## Teknolojiler
+Proje mimarisi aşağıdaki modern web ve mobil teknolojileri üzerine inşa edilmiştir:
 
-| Alan | Kullanılanlar |
+| Kategori | Teknoloji Yığını |
 |------|----------------|
-| **Çerçeve** | [Expo](https://expo.dev/) ~54, [React Native](https://reactnative.dev/) 0.81, [React](https://react.dev/) 19 |
-| **Web** | [React Native Web](https://necolas.github.io/react-native-web/), [React DOM](https://react.dev/) |
-| **Navigasyon** | [React Navigation](https://reactnavigation.org/) (native, stack, bottom tabs) |
-| **Backend / veri** | [Firebase](https://firebase.google.com/) — Authentication, Cloud Firestore, Cloud Storage |
-| **Diğer** | [react-native-gesture-handler](https://docs.swmansion.com/react-native-gesture-handler/), [react-native-screens](https://github.com/software-mansion/react-native-screens), [Async Storage](https://react-native-async-storage.github.io/async-storage/), Expo modülleri (bildirimler, dosya / medya seçici, vb.) |
+| **Çatı (Framework)** | [Expo](https://expo.dev/) ~54, [React Native](https://reactnative.dev/) 0.81, [React](https://react.dev/) 19 |
+| **Web Entegrasyonu** | [React Native Web](https://necolas.github.io/react-native-web/), [React DOM](https://react.dev/) |
+| **Navigasyon** | [React Navigation](https://reactnavigation.org/) (Native, Stack, Bottom Tabs) |
+| **Veri & Arka Uç** | [Firebase](https://firebase.google.com/) — Authentication, Cloud Firestore (NoSQL), Cloud Storage |
+| **Yan Modüller** | `react-native-gesture-handler`, `react-native-screens`, `Async Storage`, donanım erişimi için Expo SDK modülleri. |
 
-## Minimum sistem gereksinimleri
+## Geliştirme Ortamı Gereksinimleri
 
-Geliştirme ortamı için önerilen alt sınırlar:
+Projeyi yerel makinenizde (local environment) derlemek için aşağıdaki donanım ve yazılım gereksinimleri önerilmektedir:
 
-| Bileşen | Gereksinim |
-|---------|------------|
-| **İşletim sistemi** | Windows 10/11, macOS veya Linux (web + Metro için) |
-| **Node.js** | **20.x LTS** veya üzeri (18.x ile de çalışabilir; resmi olarak LTS sürüm önerilir) |
-| **Paket yöneticisi** | npm (projede `package-lock.json` ile uyumlu) |
-| **RAM** | En az **8 GB** (Android emülatörü için 16 GB daha rahat) |
-| **Web geliştirme** | Güncel bir tarayıcı (Chrome, Edge, Firefox, Safari) |
-| **Android cihaz / emülatör** | [Android Studio](https://developer.android.com/studio) veya fiziksel cihaz + USB hata ayıklama (Expo Go veya geliştirme derlemesi) |
-| **iOS simülatör / cihaz** | **macOS** + Xcode + iOS Simulator veya fiziksel iPhone (Expo Go veya geliştirme derlemesi) |
-
-Uygulamayı yalnızca **web** olarak çalıştıracaksanız Node.js + tarayıcı yeterlidir; Android Studio / Xcode şart değildir.
+* **İşletim Sistemi:** Windows 10/11, macOS veya Linux
+* **Node.js Çekirdeği:** **20.x LTS** sürümü tavsiye edilir (18.x ile geriye dönük uyumluluk mevcuttur).
+* **Paket Yöneticisi:** `npm` (Bağımlılıklar `package-lock.json` referans alınarak kurulmalıdır).
+* **Bellek (RAM):** Minimum **8 GB** (Android Emülatörü kullanılacaksa 16 GB önerilir).
+* **Derleme Ortamları:**
+    * *Android için:* [Android Studio](https://developer.android.com/studio) / Expo Go
+    * *iOS için:* **macOS** tabanlı sistem, Xcode ve iOS Simulator / Expo Go
+    * *Web için:* Modern bir tarayıcı (V8 veya WebKit tabanlı)
 
 ## Gereksinimler (proje)
 
@@ -77,8 +72,6 @@ npm install
 | `EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID` | İsteğe bağlı (Analytics) |
 
 4. Ortam değişkenlerini değiştirdikten sonra Metro’yu durdurup yeniden başlatın: `npm run start`.
-
-> **Not:** `EXPO_PUBLIC_*` değişkenleri istemci paketine gömülür; bu Firebase web SDK yapılandırması için normaldir. **Sunucu tarafı gizli anahtarları** (service account JSON, Admin SDK vb.) bu dosyalara koymayın; mobil/web bundle içinde olmamalıdır. Güvenlik için Firestore ve Storage **kurallarını** Firebase konsolunda sıkılaştırın.
 
 ## Çalıştırma
 
